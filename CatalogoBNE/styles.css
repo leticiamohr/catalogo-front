@@ -1,0 +1,309 @@
+/*Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --claro1: #e6e5f3;
+    --claro4: #a49ccb;
+}
+
+html, 
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background: var(--claro1);
+}
+
+.content {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand a {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-input {
+    width: 400px;
+    height: 25px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 70px;
+    height: 25px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover {
+    background: #00000080;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #3a006983;
+}
+
+.content .header-block {
+    max-width: 1000px;
+    min-width: 300px;
+    width: 100%;
+    height: 235px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
+    
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.header-block img {
+    width: 40%;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+.header-block .text {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+}
+
+.header-block .text h2{
+    color: black;
+    margin-bottom: 15px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
+
+.header-block .text p {
+    max-width: 280px;
+    color: #00000080;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+}
+
+/* Catálogo*/
+
+.catalog {
+    width: 100vw;
+    padding: 10px;
+    background: var(--claro1);
+}
+
+.title-wrapper-catalog {
+    /*margin-top: 20px;*/
+    color: black;
+}
+
+section .card-wrapper {
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 30px;
+}
+
+section .card-item {
+    height: 400px;
+    background: rgb(249, 247, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    padding-top: 8%;
+}
+
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img {
+    width: 85%;
+}
+
+.card-item h3 {
+    width: 90%;
+    font-style: italic;
+    text-align: center;
+}
+
+.card-item p {
+    width: 90%;
+    color: #00000080;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 180px;
+}
+
+footer .main {
+    width: 100%;
+    height: 150px;
+    background: black;
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*margin-top: 20px;*/
+    align-items: center;
+}
+
+.footer-company,  
+.footer-contact, 
+.footer-social {
+    color: white;
+    height: 100%;
+    /*min-height: 100px;*/
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.footer-company h6 {
+    cursor: pointer;
+}
+
+.main .footer-social img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+footer .last {
+    width: 100%;
+    height: 30px;
+    background: var(--claro4);
+    color: rgb(228, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustes de responsividade */
+
+@media (max-width: 576px) {
+
+    nav ul li {
+        display: none;
+    }
+
+    .search-input {
+        width: 90px;
+    }
+
+    .header-block img {
+        width: 70%;
+        position: absolute;
+        right: 16%;
+        top: 30%;
+    }
+
+    .header-block .text {
+        position: absolute;
+        bottom: 10%;
+        left: 15;
+    }
+
+    footer {
+        height: 100%;
+    }
+
+    footer .main {
+        height: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 750px) {
+    .search-input {
+        width: 110px;
+    }
+}
+
+@media (max-width: 950px) {
+    .search-input {
+        width: 200px;
+    }
+}
